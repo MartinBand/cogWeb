@@ -1,0 +1,23 @@
+
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100px;
+}
+
+.titulo{
+    font-size: 2em;
+}
+
+.logo{
+    width: 120px;
+    height: auto;
+}
+
+.version{
+    font-weight: bold;
+}
+
+

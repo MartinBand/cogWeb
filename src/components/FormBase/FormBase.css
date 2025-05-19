@@ -1,0 +1,62 @@
+
+
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .formulario{
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;;
+    justify-content: center;
+    background-color: transparent;
+    width: 80%;
+    max-width: 600px;
+    background-color: aquamarine;
+    padding: 0 5px;
+}
+
+.formulario .tituloDos{
+    font-size: 1.5em;
+    color: white;
+    padding: 10px 0;
+    align-self: center;
+}
+
+.formulario label{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    border-bottom: 1px solid black;
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+.formulario input, .formulario select{
+    border: none;
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.btn{
+    background-color: blue;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    margin: 20px auto 0 auto;
+    cursor: pointer;
+    
+}
+
+.btn:hover{
+    background-color: white;
+    color: blue;
+    transition: 0.5s ease;
+    
+}
