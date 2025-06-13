@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { Navbar, Footer, FormBase, Contrag} from './components'
+import { Navbar, Footer, FormBase} from './components'
 
 function App() {
   
@@ -9,7 +9,6 @@ function App() {
     <>
       <Navbar/>
       <FormBase/>
-      <Contrag/>
       <Footer/>
     </>
   )

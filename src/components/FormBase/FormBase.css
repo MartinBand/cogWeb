@@ -1,62 +1,118 @@
 
-
 .container{
     display:flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    min-height: calc(100vh - 200px);
 }
 
 .container .formulario{
     display:flex;
     flex-direction: column;
-    align-items: stretch;;
+    align-items: stretch;
     justify-content: center;
     background-color: transparent;
     width: 80%;
-    max-width: 600px;
-    background-color: aquamarine;
+    max-width: 800px;
+    background-color: #838383;
     padding: 0 5px;
+    border-radius: 10px;
 }
 
-.formulario .tituloDos{
+.tituloDos{
     font-size: 1.5em;
     color: white;
     padding: 10px 0;
     align-self: center;
 }
 
-.formulario label{
+.grupoCampo{
     display: flex;
-    flex-direction: column;
-    width: 90%;
-    border-bottom: 1px solid black;
-    font-size: 1em;
-    margin-top: 15px;
-}
-
-.formulario input, .formulario select{
-    border: none;
-    font-size: 1rem;
-    padding: 10px;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    margin-top: 5px;
+    height: 30px;
+    margin: 5px 0px;
 }
 
-.btn{
+.labelCliente{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: #ffffff;
+    width: 250px;
+    height: 30px;
+    font-size: 1rem;
+}
+
+.campoCliente{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: none;
+    width: 400px;
+    height: 30px;
+    font-size: 1rem;
+    
+}
+
+.containerEtapa{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btnEtapa{
+    display: flex;
+    margin-left: auto;
+    justify-content: space-between;
+    align-items: center;
     background-color: blue;
     color: white;
-    padding: 15px 30px;
+    width: 200px;
+    padding: 10px 5px;
     font-size: 18px;
     border: none;
     border-radius: 5px;
-    margin: 20px auto 0 auto;
+    margin: 20px auto 5px auto;
     cursor: pointer;
-    
 }
 
-.btn:hover{
+.btnEtapa:hover{
     background-color: white;
     color: blue;
     transition: 0.5s ease;
-    
+}
+
+.containerDos{
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.containerTres{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #34495e;
+    color: #ffffff;
+    padding-top: 20px;
+    min-height: calc(100vh - 400px);
+}
+
+.grupoCotizacion{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.grupoBtn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #34495e;
+    color: #ffffff;
 }

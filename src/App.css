@@ -4,3 +4,9 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: #34495e;
+  position: relative;
+  height: 100vh;
+}
+

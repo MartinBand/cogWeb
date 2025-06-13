@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './TipoSociedad.css'
 import { FaTrash } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa"
 
 const TipoSociedad = ({personeria, tipoSociedad}) => {
     
@@ -72,29 +73,35 @@ const TipoSociedad = ({personeria, tipoSociedad}) => {
         {tipoSociedad!=='' && (<h3 className='tituloDos'>Firmantes</h3>
         )}
         {firmantes.map ((f, i)=> (
-            <div className='container-firmantes' key={i}>
-                    <label htmlFor="nombreFirmante">Nombre y Apellido
-                    <input 
+            <div className='container-general' key={i}>
+                <div className='container-firmantes'>
+                    <div className='grupoFirmante'>
+                        <label className='labelFirmante' htmlFor="nombreFirmante">Nombre y Apellido</label>
+                        <input 
+                        className='campoFirmante'
                         type="text"
                         name='nombreFirmante'
                         value={f.nombre}
                         placeholder='Ingrese Nombre y Apellido' 
                         onChange={(e)=>{handleChange(i, 'nombre', e.target.value)}}
                         required={f.required}
-                    />
-                </label>
-                    <label htmlFor="cuit">CUIT/L
+                        />
+                    </div>
+                    <div className='grupoFirmante'>
+                        <label className='labelFirmante' htmlFor="cuitFirmante">CUIT/L</label>
                         <input 
+                            className='campoFirmante'
                             type="text"
-                            name='cuit'
+                            name='cuitFirmante'
                             value={f.cuit}
                             placeholder='Ingrese el CUIT/L' 
                             onChange={(e)=>{handleChange(i, 'cuit', e.target.value)}}
                             required={f.required}
                         />
-                    </label>
-                    <label htmlFor="cargo">Cargo
-                        <select name="cargo" value={f.cargo} onChange={(e)=>{handleChange(i, 'cargo', e.target.value)}} required={f.required}>
+                    </div>   
+                    <div className='grupoFirmante'>
+                        <label className='labelFirmante' htmlFor="cargoFirmante">Cargo</label>
+                        <select className='campoFirmante' name="cargoFirmante" value={f.cargo} onChange={(e)=>{handleChange(i, 'cargo', e.target.value)}} required={f.required}>
                             <option value="" disabled hidden>Elija una opcion</option>
                             <option value="apoderado">Apoderado/a</option>
                             <option value="presidente">Presidente/a</option>
@@ -107,11 +114,16 @@ const TipoSociedad = ({personeria, tipoSociedad}) => {
                             <option value="delegado">Delegado/a</option>
                             <option value="socio">Socio/a</option>
                         </select>
-                    </label>
-                {!f.required && (<button type="button" className="btnDos" onClick={() => removeFirmante(i)}><FaTrash style={{color:'red', fontSize:'30px'}} /></button>)}
-            </div>)
+                    </div>
+                </div>
+                <div className='container-trash'>
+                    {f.required && (<button disabled type="button" className="btnTrash"><FaTrash style={{color:'transparent', fontSize:'20px'}} /></button>)}
+                    {!f.required && (<button type="button" className="btnTrash" onClick={() => removeFirmante(i)}><FaTrash title="Eliminar firmante" style={{color:'black', fontSize:'20px'}} /></button>)}
+                </div>
+            </div>
+        )
         )}
-        {tipoSociedad!=='' && (<button className='btn' type="button" onClick={addFirmante}>Agregar Firmante</button>
+        {tipoSociedad!=='' && (<button className='btnAgregar' type="button" onClick={addFirmante}>Agregar Firmante <FaPlus /></button>
         )}
         </>
     )
