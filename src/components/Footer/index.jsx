@@ -8,3 +8,7 @@ const Footer = () => {
 }
 
 export{Footer}
+
+
+
+
